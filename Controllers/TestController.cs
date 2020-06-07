@@ -14,7 +14,7 @@ namespace hellomachine.Controllers
         [HttpGet]
         public string Get()
         {
-           return $"Hello from {Environment.MachineName}";
+           return $"Hello from webapi hosted at {Environment.MachineName}";
         }
     }
 }
