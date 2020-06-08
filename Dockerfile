@@ -3,7 +3,9 @@
 
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-nanoserver-1909 AS base
 WORKDIR /app
-EXPOSE 80
+ENV ASPNETCORE_URLS=http://+:8080
+# ENV ASPNETCORE_URLS=https://+:443
+EXPOSE 8080
 EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-nanoserver-1909 AS build
